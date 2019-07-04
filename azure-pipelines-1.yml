@@ -1,4 +1,14 @@
 # Maven
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Pay-As-You-Go (b6700194-6522-4789-b5a1-c222828c1fba)'
+    appType: 'webApp'
+    appName: 'gopal1'
+    deployToSlotOrASE: true
+    resourceGroupName: 'gopal'
+    slotName: 'staging'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
